@@ -1,0 +1,134 @@
+/* Основные стили для всей страницы */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1e1e1e; /* Темный фон страницы */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Контейнер для всего комикса */
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, #ff1744, #d50000); /* Красный градиент */
+  background-size: 400% 400%;
+  animation: gradientAnimation 6s ease infinite;
+  padding-top: 20px;
+}
+
+/* Анимация для фона */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Фрейм для контента страницы */
+.comic-frame {
+  width: 90%;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Плавное появление фрейма */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Стиль для заголовка */
+.page-header {
+  font-size: 32px;
+  font-family: 'Press Start 2P', cursive;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Стиль для изображения */
+.image-container {
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Эффект при наведении на картинку */
+.image-container img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* Текст повествования */
+.narrative p {
+  font-size: 18px;
+  color: #f5f5f5;
+  margin-top: 20px;
+  line-height: 1.6;
+  text-align: justify;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  max-width: 750px;
+  margin: 20px auto;
+}
+
+/* Кнопка перехода */
+.action-button {
+  margin-top: 20px;
+}
+
+.action-button a {
+  padding: 15px 30px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.action-button a:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Анимация для кнопок */
+@keyframes fadeInButton {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.action-button a {
+  animation: fadeInButton 2s ease-in-out;
+}
